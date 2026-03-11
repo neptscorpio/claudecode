@@ -1,0 +1,32 @@
+name: Daily Word Generator
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # 每天 UTC 0:00 触发
+  workflow_dispatch:        # 允许手动触发
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run generator
+        run: |
+          cd daily_word
+          python generator.py
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./daily_word
+          publish_branch: gh-pages
+          keep_files: false
