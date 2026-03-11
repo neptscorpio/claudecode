@@ -9,28 +9,36 @@
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@300;400&display=swap');
     body { font-family: 'Inter', sans-serif; }
     .quote-font { font-family: 'Playfair Display', serif; }
+    .bg-film {
+      background-image: url('https://picsum.photos/seed/20260311/1920/1080?grayscale');
+      background-size: cover;
+      background-position: center;
+    }
   </style>
 </head>
-<body class="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 flex flex-col items-center justify-center px-6">
-  <main class="max-w-2xl w-full text-center space-y-10">
+<body class="bg-film min-h-screen flex flex-col items-center justify-center px-6">
+  <!-- dark overlay for readability -->
+  <div class="fixed inset-0 bg-black/55"></div>
 
-    <div class="inline-block bg-orange-400 text-white text-xs tracking-[0.3em] uppercase px-4 py-1.5 rounded-full">
+  <main class="relative z-10 max-w-2xl w-full text-center space-y-10">
+
+    <div class="inline-block border border-white/30 text-white/60 text-xs tracking-[0.3em] uppercase px-4 py-1.5 rounded-full backdrop-blur-sm">
       Daily Word
     </div>
 
-    <blockquote class="quote-font italic text-3xl md:text-4xl leading-relaxed text-stone-800">
-      &ldquo;None of us can change our yesterdays but all of us can change our tomorrows.&rdquo;
+    <blockquote class="quote-font italic text-3xl md:text-4xl leading-relaxed text-white drop-shadow-lg">
+      &ldquo;Though no one can go back and make a brand new start, anyone can start from now and make a brand new ending.&rdquo;
     </blockquote>
 
     <div class="flex items-center justify-center gap-4">
-      <span class="block h-px w-10 bg-orange-300"></span>
-      <p class="text-sm tracking-widest uppercase text-orange-500 font-medium">Colin Powell</p>
-      <span class="block h-px w-10 bg-orange-300"></span>
+      <span class="block h-px w-10 bg-white/30"></span>
+      <p class="text-sm tracking-widest uppercase text-white/60">Carl Bard</p>
+      <span class="block h-px w-10 bg-white/30"></span>
     </div>
 
   </main>
 
-  <footer class="absolute bottom-8 text-xs tracking-widest uppercase text-stone-400">
+  <footer class="relative z-10 absolute bottom-8 text-xs tracking-widest uppercase text-white/30">
     March 11, 2026
   </footer>
 </body>
