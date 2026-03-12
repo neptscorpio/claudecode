@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>全民养虾梗图</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1a2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  .meme-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    padding: 40px;
+  }
+
+  /* ===== 上半部分：Drake 格式 ===== */
+  .drake-meme {
+    display: flex;
+    flex-direction: column;
+    width: 520px;
+    border: 4px solid #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  }
+  .drake-row {
+    display: flex;
+    height: 130px;
+    background: #fff;
+  }
+  .drake-row + .drake-row {
+    border-top: 4px solid #333;
+  }
+  .drake-face {
+    width: 130px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    background: #ffe0b2;
+  }
+  .drake-text {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    line-height: 1.5;
+  }
+  .drake-meme-title {
+    color: #ffd700;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: -12px;
+  }
+
+  /* ===== 下半部分：现实对比 ===== */
+  .reality-meme {
+    width: 520px;
+    background: #fff;
+    border-radius: 12px;
+    border: 4px solid #fff;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  }
+  .reality-top {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 3px;
+  }
+  .reality-panels {
+    display: flex;
+  }
+  .panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 12px;
+    border-right: 2px solid #ddd;
+    gap: 10px;
+  }
+  .panel:last-child { border-right: none; }
+  .panel-emoji { font-size: 52px; }
+  .panel-label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+    background: #f0f0f0;
+    padding: 4px 10px;
+    border-radius: 20px;
+  }
+  .panel-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  /* ===== 底部标语 ===== */
+  .footer-tag {
+    color: #aaa;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  /* ===== 语音按钮 ===== */
+  .speak-btn {
+    margin-top: 8px;
+    padding: 12px 36px;
+    font-size: 18px;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-weight: bold;
+    color: #1a1a2e;
+    background: linear-gradient(135deg, #ffd700, #ffaa00);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255, 200, 0, 0.4);
+    transition: transform 0.1s, box-shadow 0.1s;
+    letter-spacing: 2px;
+  }
+  .speak-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 24px rgba(255, 200, 0, 0.6);
+  }
+  .speak-btn:active {
+    transform: scale(0.97);
+  }
+  .speak-btn.speaking {
+    background: linear-gradient(135deg, #ff6b6b, #ff4444);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(255, 80, 80, 0.5);
+  }
+</style>
+</head>
+<body>
+<div class="meme-container">
+
+  <div class="drake-meme-title">—— 全民养虾 OpenClaw ——</div>
+
+  <!-- Drake meme -->
+  <div class="drake-meme">
+    <div class="drake-row">
+      <!-- 拒绝 -->
+      <div class="drake-face">🙅</div>
+      <div class="drake-text">认真工作、提高生产力、实现人生价值</div>
+    </div>
+    <div class="drake-row">
+      <!-- 接受 -->
+      <div class="drake-face">🫵😍</div>
+      <div class="drake-text">上班摸鱼盯着虾缸看我的虾有没有长大</div>
+    </div>
+  </div>
+
+  <!-- 现实对比 meme -->
+  <div class="reality-meme">
+    <div class="reality-top">我 vs 我养的虾</div>
+    <div class="reality-panels">
+      <div class="panel">
+        <div class="panel-emoji">🧑‍💻</div>
+        <div class="panel-label">我（主人）</div>
+        <div class="panel-text">三天没洗澡<br>外卖盒堆成山<br>账单逾期了</div>
+      </div>
+      <div class="panel">
+        <div class="panel-emoji">🦐</div>
+        <div class="panel-label">我的虾</div>
+        <div class="panel-text">水质 pH 精确到小数点<br>喂了最贵的饲料<br>有专属背景音乐</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-tag"># 我不是在养宠物，我是在赡养祖宗 #</div>
+
+  <button class="speak-btn" id="speakBtn" onclick="toggleSpeak()">🔊 朗读梗图</button>
+
+</div>
+
+<script>
+  const memeText = `
+    全民养虾，OpenClaw。
+    拒绝：认真工作、提高生产力、实现人生价值。
+    接受：上班摸鱼，盯着虾缸，看我的虾有没有长大。
+    我，versus，我养的虾。
+    我：三天没洗澡，外卖盒堆成山，账单逾期了。
+    我的虾：水质pH精确到小数点，喂了最贵的饲料，有专属背景音乐。
+    我不是在养宠物，我是在赡养祖宗。
+  `;
+
+  let utterance = null;
+
+  function toggleSpeak() {
+    const btn = document.getElementById('speakBtn');
+    if (speechSynthesis.speaking) {
+      speechSynthesis.cancel();
+      btn.textContent = '🔊 朗读梗图';
+      btn.classList.remove('speaking');
+      return;
+    }
+
+    utterance = new SpeechSynthesisUtterance(memeText);
+    utterance.lang = 'zh-CN';
+    utterance.rate = 1.0;
+    utterance.pitch = 1.1;
+
+    // 优先选中文声音
+    const voices = speechSynthesis.getVoices();
+    const zhVoice = voices.find(v => v.lang.startsWith('zh'));
+    if (zhVoice) utterance.voice = zhVoice;
+
+    utterance.onstart = () => {
+      btn.textContent = '⏹ 停止朗读';
+      btn.classList.add('speaking');
+    };
+    utterance.onend = () => {
+      btn.textContent = '🔊 朗读梗图';
+      btn.classList.remove('speaking');
+    };
+
+    speechSynthesis.speak(utterance);
+  }
+
+  // 部分浏览器需要等 voices 加载完
+  speechSynthesis.onvoiceschanged = () => {};
+</script>
+</body>
+</html>
